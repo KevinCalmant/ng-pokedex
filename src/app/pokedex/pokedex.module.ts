@@ -13,12 +13,6 @@ import { PokedexCardSkeletonComponent } from './components/pokedex-card-skeleton
 
 @NgModule({
   declarations: [PokedexListComponent, PokedexDetailtComponent, PokedexCardComponent, PokedexCardSkeletonComponent],
-  imports: [
-    CommonModule,
-    PokedexRoutingModule,
-    HttpClientModule,
-    SharedModule,
-    NgxsModule.forFeature([PokedexState]),
-  ],
+  imports: [CommonModule, PokedexRoutingModule, HttpClientModule, SharedModule, NgxsModule.forFeature([PokedexState])],
 })
 export class PokedexModule {}

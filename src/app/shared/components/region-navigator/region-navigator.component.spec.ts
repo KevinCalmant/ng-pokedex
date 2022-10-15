@@ -8,9 +8,8 @@ describe('RegionNavigatorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RegionNavigatorComponent ]
-    })
-    .compileComponents();
+      declarations: [RegionNavigatorComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(RegionNavigatorComponent);
     component = fixture.componentInstance;

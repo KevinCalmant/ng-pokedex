@@ -1,9 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  Resolve,
-  RouterStateSnapshot,
-  ActivatedRouteSnapshot,
-} from '@angular/router';
+import { Resolve, RouterStateSnapshot, ActivatedRouteSnapshot } from '@angular/router';
 import { Store } from '@ngxs/store';
 import { first, Observable, of, switchMap, tap } from 'rxjs';
 import { Region } from 'src/app/shared/model/region.model';
@@ -16,19 +12,11 @@ import { SetPokemons } from '../store/pokedex.actions';
   providedIn: 'root',
 })
 export class PokedexListResolver implements Resolve<PokeApiResponse<Pokemon>> {
-  private readonly region$: Observable<Region> = this.store.select(
-    state => state.app.region
-  );
+  private readonly region$: Observable<Region> = this.store.select(state => state.app.region);
 
-  constructor(
-    private readonly store: Store,
-    private readonly pokedexService: PokedexService
-  ) {}
+  constructor(private readonly store: Store, private readonly pokedexService: PokedexService) {}
 
-  resolve(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): Observable<PokeApiResponse<Pokemon>> {
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<PokeApiResponse<Pokemon>> {
     return this.region$?.pipe(
       switchMap(region => this.pokedexService.getPokemons(region)),
       switchMap(pokemons => this.store.dispatch(new SetPokemons(pokemons))),
