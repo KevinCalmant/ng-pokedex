@@ -12,7 +12,7 @@ import { regionDatas } from '../../utils/region-data';
 })
 export class RegionNavigatorComponent {
   readonly currentRegion$ = this.store.select(state => state.app.region);
-  readonly regions: string[] = Object.entries(regionDatas).map(([regionName, info]) => regionName);
+  readonly regions: string[] = Object.entries(regionDatas).map(([regionName]) => regionName);
 
   constructor(private readonly store: Store) {}
 

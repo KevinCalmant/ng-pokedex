@@ -1,8 +1,7 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component } from '@angular/core';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { Store } from '@ngxs/store';
-import { BehaviorSubject, distinctUntilChanged, switchMap } from 'rxjs';
-import { PokeApiResponse } from '../../model/poke-api-response.model';
+import { switchMap } from 'rxjs';
 import { Pokemon } from '../../model/pokemon.model';
 import { PokedexService } from '../../services/pokedex.service';
 import { SetPokemons } from '../../store/pokedex.actions';

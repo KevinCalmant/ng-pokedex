@@ -7,7 +7,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../shared/shared.module';
 import { NgxsModule } from '@ngxs/store';
 import { PokedexState } from './store/pokedex.state';
-import { ActivatedRouteSnapshot } from '@angular/router';
 import { PokedexCardComponent } from './components/pokedex-card/pokedex-card.component';
 import { PokedexCardSkeletonComponent } from './components/pokedex-card-skeleton/pokedex-card-skeleton.component';
 

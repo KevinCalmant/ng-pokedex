@@ -37,7 +37,16 @@
             "prefix": "app",
             "style": "kebab-case"
           }
-        ]
+        ],
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/no-unused-vars": [
+          "warn",
+          {
+            "argsIgnorePattern": "^_"
+          }
+        ],
+        "@typescript-eslint/ban-types": ["warn"],
+        "@typescript-eslint/no-explicit-any": ["error"]
       }
     },
     {
