@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy } from '@angular/core';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-pokedex-detailt',
@@ -7,8 +7,4 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pokedex-detailt.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PokedexDetailtComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-}
+export class PokedexDetailtComponent {}
