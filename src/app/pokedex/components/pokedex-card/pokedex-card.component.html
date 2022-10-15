@@ -1,0 +1,21 @@
+<div
+  *ngIf="pokemon$ | async as pokemon; else cardSkeleton"
+  class="pokedex-card-wrapper rounded-3xl overflow-hidden shadow-lg flex flex-row p-5 duration-100 hover:border-2">
+  <div class="pokemon-container">
+    <img class="pokemon rounded-full bg-pokemon" [src]="pokemon.sprites.front_default" [alt]="pokemon?.name" />
+  </div>
+  <div class="flex flex-col justify-start flex-1 space-y-6 pl-5">
+    <h1 class="pokemon-name h-5 w-9/12 font-extrabold">{{ pokemon.name }}</h1>
+    <div class="h-11 pt-4 w-full flex flex-row gap-1">
+      <app-poke-type *ngFor="let type of pokemon.types" [type]="type.type.name"></app-poke-type>
+    </div>
+  </div>
+  <div class="flex flex-col justify-center">
+    <div class="bg-info rounded-2xl min-w-max text-center">
+      <h3 class="pokemon-number font-extrabold p-2"># {{ pokemon?.id }}</h3>
+    </div>
+  </div>
+</div>
+<ng-template #cardSkeleton>
+  <app-pokedex-card-skeleton></app-pokedex-card-skeleton>
+</ng-template>

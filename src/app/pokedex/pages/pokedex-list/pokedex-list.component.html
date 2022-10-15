@@ -1,1 +1,10 @@
-<p>pokedex-list works!</p>
+<div class="pokedex-list-wrapper flex flex-col justify-center gap-5 w-full">
+  <app-region-navigator></app-region-navigator>
+  <h2 class="m-auto font-bold text-center">Click the cards to see the details!</h2>
+  <div class="flex flex-row gap-5 flex-wrap m-auto w-10/12 md:w-9/12 justify-center mt-5 mb-5">
+    <app-pokedex-card
+      *ngFor="let pokemon of (pokemonResponse$ | async)?.results; trackBy: trackByName"
+      [url]="pokemon.url">
+    </app-pokedex-card>
+  </div>
+</div>
