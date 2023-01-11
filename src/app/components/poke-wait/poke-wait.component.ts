@@ -5,6 +5,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   templateUrl: './poke-wait.component.html',
   styleUrls: ['./poke-wait.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
 })
 export class PokeWaitComponent {
   @Input() message: string | undefined;
