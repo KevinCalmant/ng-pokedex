@@ -19,4 +19,10 @@ describe('PokeTypeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should match snapshot', () => {
+    component.type = 'fire';
+    fixture.detectChanges();
+    expect(fixture).toMatchSnapshot();
+  });
 });

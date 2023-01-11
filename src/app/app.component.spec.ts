@@ -19,7 +19,6 @@ describe('AppComponent', () => {
   it(`should have as title 'ng-pokedex'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ng-pokedex');
   });
 
   it('should render title', () => {

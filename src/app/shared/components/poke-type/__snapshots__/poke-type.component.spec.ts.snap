@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokeTypeComponent should match snapshot 1`] = `
+<app-poke-type
+  __ngContext__={[Function Number]}
+  type={[Function String]}
+>
+</app-poke-type>
+`;
