@@ -53,6 +53,21 @@
       "files": ["*.html"],
       "extends": ["plugin:@angular-eslint/template/recommended"],
       "rules": {}
+    },
+    {
+      "files": ["*.json"],
+      "extends": ["plugin:json/recommended"]
+    },
+    {
+      "files": ["*.js"],
+      "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module"
+      },
+      "extends": ["plugin:node/recommended"],
+      "rules": {
+        "node/no-unpublished-require": "off"
+      }
     }
   ]
 }

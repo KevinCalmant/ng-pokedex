@@ -5,5 +5,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './pokedex-card-skeleton.component.html',
   styleUrls: ['./pokedex-card-skeleton.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
 })
 export class PokedexCardSkeletonComponent {}
