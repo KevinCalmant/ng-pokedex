@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
 import { first, Observable, of } from 'rxjs';
 import { Pokemon } from '../../model/pokemon.model';
 import { PokedexService } from '../../services/pokedex.service';
-import {AsyncPipe, NgFor, NgIf} from "@angular/common";
+import {AsyncPipe, NgFor, NgIf, NgOptimizedImage} from "@angular/common";
 import {PokeTypeComponent} from "../poke-type/poke-type.component";
 import {
   PokedexCardSkeletonComponent
@@ -18,6 +18,7 @@ import {
     AsyncPipe,
     NgIf,
     NgFor,
+    NgOptimizedImage,
     PokeTypeComponent,
     PokedexCardSkeletonComponent,
   ]
