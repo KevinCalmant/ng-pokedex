@@ -1,5 +1,5 @@
 import {HttpClient, HttpParams} from '@angular/common/http';
-import {Injectable} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {BehaviorSubject, map, Observable, of, switchMap, tap} from 'rxjs';
 import {environment} from 'src/environments/environment';
 import {PokeApiResponse} from '../model/poke-api-response.model';
@@ -19,8 +19,7 @@ export class PokedexService {
   readonly loading$ = this._loading$.asObservable();
   readonly currentRegion$ = this._regions$.asObservable();
 
-  constructor(private readonly httpClient: HttpClient) {
-  }
+  private readonly httpClient = inject(HttpClient);
 
   getPokemons(): Observable<void> {
     return this.currentRegion$.pipe(

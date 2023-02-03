@@ -1,7 +1,7 @@
 <div id="app">
   <div class="m-auto">
     <img class="header-logo m-auto -mt-12 -mb-12" src="../assets/images/header-logo.png" alt="header logo" />
-    <app-poke-wait *ngIf="loading$ | async" message="Pokedex is starting!"></app-poke-wait>
-    <router-outlet></router-outlet>
+    <app-poke-wait *ngIf="loading$ | async" message="Pokedex is starting!" />
+    <router-outlet />
   </div>
 </div>

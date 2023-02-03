@@ -18,7 +18,7 @@
   <div class="flex flex-col justify-start flex-1 space-y-6 pl-5">
     <h1 class="pokemon-name h-5 w-9/12 font-extrabold">{{ pokemon.name }}</h1>
     <div class="h-11 pt-4 w-full flex flex-row gap-1">
-      <app-poke-type *ngFor="let type of pokemon.types" [type]="type.type.name"></app-poke-type>
+      <app-poke-type *ngFor="let type of pokemon.types" [type]="type.type.name" />
     </div>
   </div>
   <div class="flex flex-col justify-center">
@@ -28,5 +28,5 @@
   </div>
 </div>
 <ng-template #cardSkeleton>
-  <app-pokedex-card-skeleton></app-pokedex-card-skeleton>
+  <app-pokedex-card-skeleton />
 </ng-template>

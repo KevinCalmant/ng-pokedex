@@ -1,5 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component } from '@angular/core';
-import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Pokemon } from '../../model/pokemon.model';
 import { PokedexService } from '../../services/pokedex.service';
 import {AsyncPipe, NgFor} from "@angular/common";

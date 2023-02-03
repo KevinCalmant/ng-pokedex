@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
 import {PokedexService} from "../../services/pokedex.service";
 import {take} from "rxjs";
 import {Region} from "../../model/region.model";
@@ -18,11 +18,10 @@ import {regionDatas} from "../../utils/region-data";
   ]
 })
 export class RegionNavigatorComponent {
+  private readonly pokedexService = inject(PokedexService);
+
   readonly currentRegion$ = this.pokedexService.currentRegion$;
-
   readonly regions: string[] = Object.entries(regionDatas).map(([regionName]) => regionName);
-
-  constructor(private readonly pokedexService: PokedexService) {}
 
   onRegionClick(region: string) {
     this.pokedexService.setRegion(region as Region).pipe(take(1)).subscribe();

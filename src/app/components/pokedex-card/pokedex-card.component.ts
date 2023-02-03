@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, inject, Input, OnInit} from '@angular/core';
 import { first, Observable, of } from 'rxjs';
 import { Pokemon } from '../../model/pokemon.model';
 import { PokedexService } from '../../services/pokedex.service';
@@ -28,7 +28,7 @@ export class PokedexCardComponent implements OnInit {
 
   pokemon$: Observable<Pokemon | null> = of(null);
 
-  constructor(private readonly pokedexService: PokedexService) {}
+  private readonly pokedexService = inject(PokedexService);
 
   ngOnInit(): void {
     this.pokemon$ = this.pokedexService.getPokemon(this.url).pipe(first());
